@@ -12,7 +12,7 @@ var rectColor = [0, 255, 0];
 var rectThickness = 2;
 
 // initialize camera
-var camera = new cv.VideoCapture("http://admin:admin@192.168.173.181:8086/channel1");
+var camera = new cv.VideoCapture("http://admin:admin@192.168.173.181:8085/channel1");
 camera.setWidth(camWidth);
 camera.setHeight(camHeight);
 
