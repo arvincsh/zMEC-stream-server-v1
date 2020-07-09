@@ -17,6 +17,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get install -y tzdata && apt-get install -y libopencv-dev
 
-RUN npm install 
+RUN sudo npm install 
 
 CMD [ "node", "/home/work/zMEC-stream-server-v1/server/server.js" ]
