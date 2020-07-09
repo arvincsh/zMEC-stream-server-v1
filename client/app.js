@@ -1,5 +1,5 @@
 // MODIFY THIS TO THE APPROPRIATE URL IF IT IS NOT BEING RUN LOCALLY
-var socket = io.connect('http://localhost');
+var socket = io.connect();
 
 var canvas = document.getElementById('canvas-video');
 var context = canvas.getContext('2d');
@@ -18,5 +18,6 @@ socket.on('frame', function (data) {
   img.onload = function () {
     context.drawImage(this, 0, 0, canvas.width, canvas.height);
   };
-  img.src = 'data:image/png;base64,' + base64String;
+  //img.src = 'data:image/png;base64,' + base64String;
+  img.src = 'data:image/png;base64,' + data.buffer;
 });
